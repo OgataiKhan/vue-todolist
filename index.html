@@ -26,11 +26,20 @@
     <!-- Main -->
     <main>
       <div class="container">
-        <!-- <div class="row">
+        <!-- Input field -->
+        <div class="row">
           <div class="col col-md-7 mx-auto">
-
+            <div class="mb-2">
+              <label for="new-task">Add new task:</label>
+            </div>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="New task" id="new-task" v-model="newTask">
+              <button class="btn btn-primary" type="button" id="add-task" @click="addTask">Add</button>
+            </div>
           </div>
-        </div> -->
+        </div>
+        <!-- /Input field -->
+        <!-- List -->
         <div class="row">
           <div class="col col-md-7 mx-auto">
             <ul v-if="tasks.length > 0" class="list-group">
@@ -39,11 +48,14 @@
                 <i role="button" @click="deleteTask(index)" class="fa-solid fa-xmark"></i>
                 </li>
             </ul>
+            <!-- Empty list alert -->
             <div v-else class="alert alert-info" role="alert">
               Your list is empty. Add a new task with the input field above.
             </div>
+            <!-- /Empty list alert -->
           </div>
         </div>
+        <!-- /List -->
       </div>
     </main>
     <!-- /Main -->
