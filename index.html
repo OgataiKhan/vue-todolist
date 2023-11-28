@@ -46,7 +46,7 @@
           <div class="col col-md-7 mx-auto">
             <ul v-if="tasks.length > 0" class="list-group">
               <li v-for="(task, index) in tasks" class="list-group-item d-flex justify-content-between align-items-center">
-                <div :class="{ 'text-decoration-line-through text-body-tertiary': task.done }">{{ task.text }}</div>
+                <div :class="{ 'text-decoration-line-through text-body-tertiary': task.done }" @click="toggleDone(index)" role="button">{{ task.text }}</div>
                 <i role="button" @click="deleteTask(index)" class="fa-solid fa-xmark"></i>
                 </li>
             </ul>

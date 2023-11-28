@@ -34,6 +34,9 @@ const { createApp } = Vue;
           });
           this.newTask = '';
         }
+      },
+      toggleDone(index) {
+        this.tasks[index].done = !this.tasks[index].done;
       }
     }
   }).mount('#app');
