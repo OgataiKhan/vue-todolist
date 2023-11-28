@@ -5,7 +5,20 @@ const { createApp } = Vue;
   createApp({
     data() {
       return {
-        message: 'Hello Vue!'
+        tasks: [
+          {
+            text: 'Read a book',
+            done: false
+          },
+          {
+            text: 'Pet the cat',
+            done: false
+          },
+          {
+            text: 'Learn to code',
+            done: true
+          },
+        ]
       }
     }
   }).mount('#app');
