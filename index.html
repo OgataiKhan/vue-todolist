@@ -33,8 +33,10 @@
               <label for="new-task">Add new task:</label>
             </div>
             <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="New task" id="new-task" v-model="newTask">
+              <input type="text" class="form-control" placeholder="New task" id="new-task" v-model="newTask" @keyup.enter="addTask">
+              <!-- Add task button -->
               <button class="btn btn-primary" type="button" id="add-task" @click="addTask">Add</button>
+              <!-- /Add task button -->
             </div>
           </div>
         </div>
