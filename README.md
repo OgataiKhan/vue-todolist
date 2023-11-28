@@ -21,4 +21,4 @@ Features include:
 7. Add input field. Use v-model to track its text and a button to call an addTask function that pushes the new task into the tasks array. "done" is set to "false" by default.
 8. Use @keyup.enter to allow adding new tasks with Enter.
 9. Create a toggleDone function that toggles the state of "done" for a given object. Activate it on click of a task.
-10. Add v-cloak
+10. Add v-cloak.
