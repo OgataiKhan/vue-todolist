@@ -35,8 +35,8 @@ createApp({
         this.newTask = '';
       }
     },
-    toggleDone(index) {
-      this.tasks[index].done = !this.tasks[index].done;
+    toggleDone(task) {
+      task.done = !task.done;
     }
   }
 }).mount('#app');
